@@ -1,6 +1,6 @@
 # WebDAV 服务器（macOS 版）使用说明
 
-> 本文件是 macOS 版说明。Windows 与 Android 版见 `总览（三平台）.md`、`Windows版/使用说明（Windows）.md`、`Android版源码/使用说明（Android）.md`。
+> 本文件是 macOS 版说明。Windows 与 Android 版见 `三平台总览.md`、`使用说明-Windows.md`、`使用说明-Android.md`。
 
 一个原生 macOS 小应用：把 Mac 上的某个文件夹变成标准的 WebDAV 服务器，并自带三条远程访问通道——**Cloudflare 快速隧道、绑定自有域名的命名隧道、DDNS + 端口映射**。
 
@@ -138,7 +138,7 @@
 
 ## 七、源码与重新构建
 
-源码在 `源码/` 目录，纯 Swift（无 Xcode 工程，用 `build.sh` 直接编译）：
+源码在 `../macos/` 目录，纯 Swift（无 Xcode 工程，用 `build.sh` 直接编译）：
 
 ```bash
 cd 源码

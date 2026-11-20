@@ -14,6 +14,25 @@
 
 三条远程访问通道：Cloudflare 快速隧道（免账号，一键生成 `https://xxx.trycloudflare.com`）、自有域名 + 命名隧道（地址固定）、DDNS + 端口映射（家里有公网 IP 直连）。隧道自带 HTTPS。
 
+## 界面
+
+macOS 版：原生 SwiftUI 窗口，菜单栏常驻，地址、二维码、账号密码一屏搞定。
+
+![macOS 版主界面](docs/images/macos-main.png)
+
+Windows 版：Go 单文件启动后自动开浏览器，本地网页控制台就是全部界面。
+
+![Windows 版控制台](docs/images/windows-console.png)
+
+Android 版：单页原生控件 + 前台服务，布局与上面两端同构（截图待补）。
+
+## 使用说明
+
+- macOS：[docs/使用说明-macOS.md](docs/使用说明-macOS.md)
+- Windows：[docs/使用说明-Windows.md](docs/使用说明-Windows.md)
+- Android：[docs/使用说明-Android.md](docs/使用说明-Android.md)
+- 三平台功能对照：[docs/三平台总览.md](docs/三平台总览.md) · 功能清单：[docs/功能介绍.md](docs/功能介绍.md)
+
 ## 核心功能
 
 - **一键成服务器**：选文件夹、设端口、设账号密码，点「开始共享」即可。标准 WebDAV 协议，访达 / 资源管理器 / iOS 文件 App / Cyberduck / nPlayer 都能直连。
@@ -74,6 +93,15 @@ cd android && ./gradlew assembleDebug   # 需在 local.properties 里配置 sdk.
 | macOS 14+（arm64） | `WebDAV-Server-1.0-macos-arm64.dmg` |
 | Windows 10/11 x64 | `WebDAVServer-Windows-x64.zip` |
 | Android 8+（arm64） | `WebDAVServer-android-arm64.apk` |
+
+## 致谢
+
+这个项目本身只是「壳」，真正把文件共享出去的能力全来自两位开源作者的项目，在此郑重致谢：
+
+- **[hacdias/webdav](https://github.com/hacdias/webdav)** —— Henrique Dias（[@hacdias](https://github.com/hacdias)）写的 WebDAV 服务端，MIT 许可。三端的服务端内核都是它（v5.17.3），协议实现一行没改。
+- **[cloudflared](https://github.com/cloudflare/cloudflared)** —— Cloudflare 官方开源的隧道客户端，Apache-2.0 许可。三端的公网通道都靠它（2026.10.7）。
+
+也感谢 Go、Swift、Gradle 这些工具链的维护者，以及所有把 WebDAV 生态维持得这么好用的开发者。如果这个壳对你有用，请把 star 也分一点给上面这两个上游仓库。
 
 ## 开源组件
 
