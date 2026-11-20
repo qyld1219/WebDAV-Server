@@ -67,7 +67,13 @@ cd android && ./gradlew assembleDebug   # 需在 local.properties 里配置 sdk.
 
 ## 安装包
 
-编译好的 macOS `.dmg`、Windows `.zip`、Android `.apk` 见本仓库的 **Releases** 页面。
+编译好的 macOS `.dmg`、Windows `.zip`、Android `.apk` 见 [Releases](https://github.com/qyld1219/WebDAV-Server/releases/latest)：
+
+| 平台 | 文件 |
+| --- | --- |
+| macOS 14+（arm64） | `WebDAV-Server-1.0-macos-arm64.dmg` |
+| Windows 10/11 x64 | `WebDAVServer-Windows-x64.zip` |
+| Android 8+（arm64） | `WebDAVServer-android-arm64.apk` |
 
 ## 开源组件
 
